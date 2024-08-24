@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Box } from "@mui/material";
@@ -22,8 +21,14 @@ const Header = () => {
               component={Link}
               to="/"
               variant="contained"
-              color="primary"
-              sx={{ marginRight: "10px" }}
+              sx={{
+                backgroundColor: "info", // Orange Red
+                color: "#ffffff", // White text
+                marginRight: "10px",
+                "&:hover": {
+                  backgroundColor: "#ff6347", // Lighter shade on hover
+                },
+              }}
             >
               Home
             </Button>
@@ -31,8 +36,14 @@ const Header = () => {
               component={Link}
               to="/about"
               variant="contained"
-              color="primary"
-              sx={{ marginRight: "10px" }}
+              sx={{
+                backgroundColor: "info", // Dark Orange
+                color: "#ffffff", // White text
+                marginRight: "10px",
+                "&:hover": {
+                  backgroundColor: "#ffa07a", // Lighter shade on hover
+                },
+              }}
             >
               About
             </Button>
@@ -44,8 +55,15 @@ const Header = () => {
               component={Link}
               to="/login"
               variant="contained"
-              color="primary"
-              sx={{ marginLeft: "auto" }}
+              sx={{
+                backgroundColor: "info",
+                color: "#ffffff", // White text
+                marginLeft: "auto",
+                "&:hover": {
+                  backgroundColor: "#ffa07a",
+                  color: "#ffffff", // Lighter shade on hover
+                },
+              }}
             >
               Login
             </Button>
